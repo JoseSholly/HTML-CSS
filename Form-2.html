@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form using HTML and CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Styling the body */
+        body{
+            background-color: #c0dee5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+
+        }
+        /* Styling the form */
+        form{
+            background: #add8e6;
+            max-width: 500px;
+            margin: 25px auto;
+            padding: 20px 10px;
+            box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+
+        }
+
+        /* Styling form-layout class */
+        .form-layout{
+            text-align: left;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        
+        /* Styleing form-layout label  */
+        .form-layout label{
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+
+        /* styling form-layout input, select, textarea */
+        .form-layout input,
+        .form-layout select,
+        .form-layout textarea{
+            border: 1px solid #318bc7;
+            border-radius: 5px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+            text-align: left;
+            text-indent: 0;
+            font-weight: 20px;
+        }
+
+
+        #label-name,
+        #label-mail,
+        #label-age,
+        #label-role,
+        #label-recommend,
+        #label-lang{
+            font-weight: bold;
+        }
+
+        /* Styling form-layout Radio and Button and
+         Checkbox */
+         .form-layout input[type="radio"],
+         .form-layout input[type="checkbox"]{
+            display: inline-block;
+            width: 40px;
+         }
+
+         /* Styling Buttton  */
+         button{
+            background: #318bc7;
+            border: 1px solid #318bc7;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+         }
+        
+    </style>
+  </head>
+  <body>
+    <h1>Survey Form</h1>
+
+    <!-- Form -->
+    <form action="" id="form">
+      <!-- Details -->
+      <div class="form-layout">
+        <label for="name" id="label-name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your Name"
+        />
+      </div>
+
+      <div class="form-layout">
+        <label for="email" id="label-mail">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+      </div>
+
+      <div class="form-layout">
+        <label for="age" id="label-age">Age</label>
+        <input type="text" name="age" id="age" placeholder="Enter Your Age">
+      </div>
+
+      <div class="form-layout">
+        <label for="role" id="label-role">
+            What is your role?
+        </label>
+        <!-- Dropdown options -->
+        <select name="role" id="role">
+            <option value="student">Student</option>
+            <option value="intern">Intern</option>
+            <option value="student">Student</option>
+            <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-layout">
+        <label for="" id="label-recommend">
+            What would recommend  organiztion to a friend ??
+        </label>
+        <!-- Input Type Radio Button -->
+            <label for="recommed-1" class="recommend-label">
+                <input type="radio"
+                       id="recommed-1"
+                       class="rec"
+                       name="recommed">Yes</input>
+            </label>
+            <label for="recommed-2" class="recommend-label">
+                <input type="radio"
+                       id="recommed-2"
+                       class="rec"
+                       name="recommed">No</input>
+            </label>
+            <label for="recommed-3" class="recommend-label">
+                <input type="radio"
+                       id="recommed-3"
+                       class="rec"
+                       name="recommed">Maybe</input>
+            </label>
+        </div>
+        <div class="form-layout">
+            <label id="label-lang">Languages and Frameworks known
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">C</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">C++</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">C#</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Java</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Python</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">JavaScript</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">React</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Angular</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Django</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Spring</input></label>
+            <div class="form-layout">
+            <label for="comment">
+                <strong>Any comments or suggestions</strong>
+            </label>
+
+
+        </div>
+        <!-- multi-line text input layout -->
+            <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+        </div>
+  
+        <!-- Multi-line Text Input layout -->
+        <button type="submit" value="submit", class="form">
+            Submit
+        </button>
+  
+        
+    </form>
+  </body>
+</html>
